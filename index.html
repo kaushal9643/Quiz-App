@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main">
+        <header class="header">
+            <a href="" class="logo">Quiz.</a>
+
+            <nav class="navbar">
+                <a href="#" class="active">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+
+        <div class="container">
+            <section class="quiz-section">
+                <div class="quiz-box">
+                    <h1>Quiz</h1>
+                    <div class="quiz-header">
+                        <span class="header-score">
+                            Score: 0 / 5
+                        </span>
+                    </div>
+                    <h2 class="question-text">What does HTML stands for?</h2>
+                    <div class="options-list">
+                        <!-- <div class="option">
+                            <span>A. HighText Machine Language</span>
+                        </div>
+                        <div class="option">
+                            <span>B. HyperText and Links Markup Language</span>
+                        </div>
+                        <div class="option">
+                            <span>C. HyperText Markup Language</span>
+                        </div>
+                        <div class="option">
+                            <span>D. None of the above</span>
+                        </div> -->
+                    </div>
+
+                    <div class="quiz-footer">
+                        <div class="question-total">1 of 5 Questions</div>
+                        <button class="next-btn">Next</button>
+                    </div>
+                </div>
+
+                <div class="result-box">
+                    <h2>Quiz Result</h2>
+                    <div class="percentage-container">
+                        <div class="circular-progress">
+                            <span class="progress-value">0%</span>   
+                        </div>
+                        <span class="score-text">Your Score 0 out of 5</span>
+                    </div>
+                    <div class="buttons">
+                        <button class="tryAgain-btn">Try Again</button>
+                        <button class="goHome-btn">Go To Home</button>
+                    </div>
+                </div>
+            </section>
+            <section class="home">
+                <div class="home-content">
+                    <h1>Quiz Website</h1>
+                    <p>An interactive quiz platform to practice web development basics. Get instant feedback, live scoring, and a polished results summary.</p>
+                    <button class="start-btn">Start Quiz</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="popup-info">
+        <h2>Quiz Guide</h2>
+        <span class="info">1. Read each question carefully before answering.</span>
+        <span class="info">2. Select the option you believe is correct.</span>
+        <span class="info">3. You can only choose one answer per question.</span>
+        <span class="info">4. Once submitted, you cannot change your answer.</span>
+        <span class="info">5. Try to answer all questions to get your final score.</span>
+
+        <div class="btn-group">
+            <button class="info-btn exit-btn">Exit Quiz</button>
+            <a href="#" class="info-btn continue-btn">Continue</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="question.js"></script>
+</body>
+</html>
