@@ -9,6 +9,9 @@ const resultBox = document.querySelector(".result-box");
 const tryAgainBtn = document.querySelector(".tryAgain-btn");
 const goHomeBtn = document.querySelector(".goHome-btn");
 
+let timer;
+let timeLeft = 30; 
+
 startBtn.onclick = ()=>{
     popupInfo.classList.add("active");
     main.classList.add("active");
@@ -91,6 +94,10 @@ function showQuestions(index) {
     for(let i=0; i<option.length; i++){
         option[i].setAttribute('onclick', 'optionSelected(this)');
     }
+
+    clearInterval(timer);
+    timeLeft = 30;
+    startTimer();
 }
 
 function optionSelected(answer){
@@ -151,4 +158,39 @@ function showResultBox() {
             clearInterval(progress)
         }
     }, speed);
+}
+
+function startTimer() {
+    const timerBar = document.querySelector(".timer-bar");
+    const timerText = document.querySelector(".timer-text");
+
+    // Reset
+    timerBar.style.width = '100%';
+    timerText.textContent = `${timeLeft}s`;
+
+    timer = setInterval(() => {
+        timeLeft--;
+        timerText.textContent = `${timeLeft}s`;
+        timerBar.style.width = `${(timeLeft / 30) * 100}%`;
+
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            autoNextQuestion();
+        }
+    }, 1000);
+}
+
+
+function autoNextQuestion() {
+    const allOptions = optionsList.children.length;
+    const correctAnswer = questions[questionCount].answer;
+
+    // Highlight correct answer
+    for (let i = 0; i < allOptions; i++) {
+        if (optionsList.children[i].textContent == correctAnswer) {
+            optionsList.children[i].classList.add('correct');
+        }
+        optionsList.children[i].classList.add('disabled');
+    }
+    nextBtn.classList.add(`active`);
 }

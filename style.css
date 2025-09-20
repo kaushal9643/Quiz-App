@@ -784,3 +784,34 @@ body{
     background: #00c4cc;
     color: #fff;
 }
+/* Timer bar styling */
+.timer-container {
+    position: relative;
+    width: 150px;
+    height: 15px;
+    border: 2px solid #00c4cc;
+    border-radius: 8px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.timer-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #00c4cc;
+    transition: width 1s linear;
+}
+
+.timer-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 600;
+    top: 50%;
+    transform: translateY(-50%);
+}

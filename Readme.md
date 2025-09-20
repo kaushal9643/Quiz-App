@@ -11,6 +11,11 @@ Users can test their knowledge on various topics and get instant feedback on the
 - Score tracking system.
 - Mobile-friendly design.
 - Easy to add or edit questions from the `questions` array.
+- Give a **30-second countdown** for each question.
+- Display a **visual shrinking bar** to indicate remaining time.
+- Show the **numerical countdown** beside the bar.
+- Automatically proceed to the **next question** if time runs out.
+
 
 ---
 
